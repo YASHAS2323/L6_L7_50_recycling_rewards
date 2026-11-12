@@ -1,0 +1,130 @@
+.....FF.F.FF...FFF.FF.F..FFF.FFF...                                      [100%]
+================================== FAILURES ===================================
+__________ test_reward_rejects_non_numeric_or_boolean_weights[True] ___________
+test_processor.py:32: in test_reward_rejects_non_numeric_or_boolean_weights
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+__________ test_reward_rejects_non_numeric_or_boolean_weights[False] __________
+test_processor.py:32: in test_reward_rejects_non_numeric_or_boolean_weights
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+___________ test_reward_rejects_negative_or_non_finite_weights[inf] ___________
+test_processor.py:38: in test_reward_rejects_negative_or_non_finite_weights
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+___________ test_reward_rejects_negative_or_non_finite_weights[nan] ___________
+test_processor.py:38: in test_reward_rejects_negative_or_non_finite_weights
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______________________ test_fuzz_reward_weight_contract _______________________
+test_processor.py:43: in test_fuzz_reward_weight_contract
+    @given(weight=st.one_of(st.none(), st.booleans(), st.floats(allow_nan=True, allow_infinity=True)))
+                   ^^^
+test_processor.py:46: in test_fuzz_reward_weight_contract
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+E   Failing test case: test_fuzz_reward_weight_contract(
+E       weight=False,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\SEM_5\SE_LAB07\.lab7_tmp\initial\test_processor.py:46
+_______________ test_collection_rejects_invalid_bag_counts[2.0] _______________
+test_processor.py:67: in test_collection_rejects_invalid_bag_counts
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+______________ test_collection_rejects_invalid_bag_counts[True] _______________
+test_processor.py:67: in test_collection_rejects_invalid_bag_counts
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+______________ test_collection_rejects_invalid_bag_counts[False] ______________
+test_processor.py:67: in test_collection_rejects_invalid_bag_counts
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+_________________ test_collection_rejects_negative_bag_count __________________
+test_processor.py:72: in test_collection_rejects_negative_bag_count
+    with pytest.raises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+______________________ test_fuzz_collection_bag_contract ______________________
+test_processor.py:77: in test_fuzz_collection_bag_contract
+    @given(bags=st.one_of(st.none(), st.booleans(), st.integers()))
+                   ^^^
+test_processor.py:80: in test_fuzz_collection_bag_contract
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+E   Failing test case: test_fuzz_collection_bag_contract(
+E       bags=False,
+E   )
+_______________________ test_fuzz_slot_minute_contract ________________________
+test_processor.py:100: in test_fuzz_slot_minute_contract
+    @given(minutes=st.one_of(st.none(), st.booleans(), st.integers()))
+                   ^^^
+test_processor.py:103: in test_fuzz_slot_minute_contract
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+E   Failing test case: test_fuzz_slot_minute_contract(
+E       minutes=False,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\SEM_5\SE_LAB07\.lab7_tmp\initial\test_processor.py:103
+___________ test_slot_rejects_non_integer_or_boolean_minutes[20.0] ____________
+test_processor.py:111: in test_slot_rejects_non_integer_or_boolean_minutes
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+___________ test_slot_rejects_non_integer_or_boolean_minutes[True] ____________
+test_processor.py:111: in test_slot_rejects_non_integer_or_boolean_minutes
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+___________ test_slot_rejects_non_integer_or_boolean_minutes[False] ___________
+test_processor.py:111: in test_slot_rejects_non_integer_or_boolean_minutes
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+______________ test_boolean_flags_are_validated[<lambda>-args0] _______________
+test_processor.py:124: in test_boolean_flags_are_validated
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+______________ test_boolean_flags_are_validated[<lambda>-args1] _______________
+test_processor.py:124: in test_boolean_flags_are_validated
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+______________ test_boolean_flags_are_validated[<lambda>-args2] _______________
+test_processor.py:124: in test_boolean_flags_are_validated
+    with pytest.raises(TypeError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE TypeError
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_reward_rejects_non_numeric_or_boolean_weights[True]
+FAILED test_processor.py::test_reward_rejects_non_numeric_or_boolean_weights[False]
+FAILED test_processor.py::test_reward_rejects_negative_or_non_finite_weights[inf]
+FAILED test_processor.py::test_reward_rejects_negative_or_non_finite_weights[nan]
+FAILED test_processor.py::test_fuzz_reward_weight_contract - Failed: DID NOT ...
+FAILED test_processor.py::test_collection_rejects_invalid_bag_counts[2.0] - F...
+FAILED test_processor.py::test_collection_rejects_invalid_bag_counts[True] - ...
+FAILED test_processor.py::test_collection_rejects_invalid_bag_counts[False]
+FAILED test_processor.py::test_collection_rejects_negative_bag_count - Failed...
+FAILED test_processor.py::test_fuzz_collection_bag_contract - Failed: DID NOT...
+FAILED test_processor.py::test_fuzz_slot_minute_contract - Failed: DID NOT RA...
+FAILED test_processor.py::test_slot_rejects_non_integer_or_boolean_minutes[20.0]
+FAILED test_processor.py::test_slot_rejects_non_integer_or_boolean_minutes[True]
+FAILED test_processor.py::test_slot_rejects_non_integer_or_boolean_minutes[False]
+FAILED test_processor.py::test_boolean_flags_are_validated[<lambda>-args0] - ...
+FAILED test_processor.py::test_boolean_flags_are_validated[<lambda>-args1] - ...
+FAILED test_processor.py::test_boolean_flags_are_validated[<lambda>-args2] - ...
+17 failed, 18 passed in 8.56s

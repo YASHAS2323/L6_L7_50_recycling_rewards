@@ -1,0 +1,4 @@
+Recycling rewards processor (starter)
+paper, 10 kg, no bonus: 30
+20 kg, 2 bags, non-hazardous: True
+20 minutes, morning, not a holiday: open
